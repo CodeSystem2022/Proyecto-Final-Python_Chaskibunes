@@ -633,7 +633,7 @@ public class Pseintenjava129 {
 	}
 
 	// este es el subproseso de la opcion tren
-	public static void tren(int n) throws IOException {
+	public static void entren(int n) throws IOException {
 		double km;
 		String m;
 		km = 0;
