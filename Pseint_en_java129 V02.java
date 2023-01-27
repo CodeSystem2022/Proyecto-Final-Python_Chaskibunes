@@ -1,7 +1,6 @@
-/*
- * Los Chaskibunes
- * Trabajo de PSeint a java
- */
+//Los Chaskibunes
+//Trabajo de PSeint a java
+
 package Pseintenjava;
 
 import java.util.Scanner;
