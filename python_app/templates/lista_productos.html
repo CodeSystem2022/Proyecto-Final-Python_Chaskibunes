@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}" />
+  </head>
+  <body>
+    <h1>Lista de Productos</h1>
+    {% if products %}
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in products %}
+            <tr>
+              <td>{{ product.id }}</td>
+              <td>{{ product.nombre }}</td>
+              <td>{{ product.precio }}</td>
+              <td>{{ product.cantidad_stock }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No se encontraron productos registrados.</p>
+    {% endif %}
+    <a href="/">Volver al inicio</a>
+  </body>
+</html>
