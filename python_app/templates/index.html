@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Inventario</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sistema de Gestión de Inventario</h1>
+
+      <a href="{% url 'python_app:lista_productos' %}">Ver productos</a>
+
+      <!-- Formulario para agregar un nuevo producto -->
+      <h2>Agregar Producto</h2>
+      <form action="{% url 'python_app:agregar_producto' %}" method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <br />
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required />
+        <br />
+        <label for="cantidad">Cantidad en stock:</label>
+        <input type="number" id="cantidad" name="cantidad" required />
+        <br />
+        <input type="submit" value="Agregar" />
+      </form>
+
+      <!-- Formulario para buscar un producto -->
+      <h2>Buscar Producto</h2>
+      <form action="{% url 'python_app:buscar_producto' %}" method="get">
+        <label for="buscar_nombre">Nombre:</label>
+        <input type="text" id="buscar_nombre" name="nombre" required />
+        <br />
+        <input type="submit" value="Buscar" />
+      </form>
+
+      <!-- Formulario para eliminar un producto -->
+      <h2>Eliminar Producto</h2>
+      <form action="{% url 'python_app:eliminar_producto' %}" method="post">
+        {% csrf_token %}
+        <label for="eliminar_nombre">Nombre del Producto:</label>
+        <input type="text" id="eliminar_nombre" name="nombre" required />
+        <br/>
+        <input type="submit" value="Eliminar" />
+      </form>
+    </div>
+  </body>
+</html>
