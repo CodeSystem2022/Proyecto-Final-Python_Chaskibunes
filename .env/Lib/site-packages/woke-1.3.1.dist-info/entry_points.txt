@@ -1,0 +1,3 @@
+[console_scripts]
+woke = woke.cli.__main__:main
+woke-solc = woke.cli.__main__:woke_solc
