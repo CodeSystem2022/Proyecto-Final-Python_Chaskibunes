@@ -22,7 +22,7 @@ Aquí esta el enlace a la wiki de lista_productos.html del proyecto django que v
 <br><strong>
 Aquí esta el enlace a la wiki de app.css del proyecto django que viene siendo el diseño que continenen las paginas html: https://github.com/CodeSystem2022/Chaskibunes2023---Tercer-Semestre/wiki/Wiki-css</br></strong>
 
-## `Integrante`
+## `Integrantes`
 
 :large_orange_diamond:  Gabriel Muñoz
 
